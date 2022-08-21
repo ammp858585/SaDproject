@@ -14,3 +14,32 @@ else
         echo "something went wrong"
 fi
   
+re="*[[:space:]]*"
+#help for format  input
+while read -n1  line
+do
+        echo $line
+
+        if [[ $line = "${str%[[:space:]]*}" ]]
+		then
+                        echo "the space of ip is ok" 
+
+                        if  [[ $line = "${str%[[:space:]]*}" ]]
+                                then 
+                                        echo "the space of port is ok"
+					if  [[ $line =~ (?:*) ]]
+                                                then
+                                                        echo "the colon of usernam is ok">
+                                                else
+                                                        echo "--"
+
+						 fi
+                                else
+                                        echo "--"
+                        fi
+                else
+                        echo "--"
+  fi
+
+
+done < $filename
