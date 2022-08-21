@@ -47,6 +47,9 @@ done < $filename
 #validation the ip and port and password character
 
 
+t=0
+f=0
+
 while read  line
 do 
         echo $line
@@ -55,9 +58,19 @@ do
 
                 then
                          echo "this is valid ip"
+			 ((t=t+1))
+
                 else
                          echo "this isn t valid ip"
+			 ((f=f+1))
+
         fi
 
 done < $filename
 
+#final output
+echo""
+echo "------------------final output---------------------"
+
+echo "your valid input of ip,port,username,password is" $t
+echo "your invalid input of ip,port,username,password is which need to alter" $f
