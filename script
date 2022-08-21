@@ -43,3 +43,24 @@ do
 
 
 done < $filename
+
+#validation the ip and port and password character
+
+#validation the ip and port and password character
+
+#validation the ip and port and password character
+
+while read  line
+do 
+        echo $line
+
+        if [[ $line =~ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\ [0-9]{1,5}\>
+
+                then
+                         echo "this is valid ip"
+                else
+                         echo "this isn t valid ip"
+        fi
+
+done < $filename
+
