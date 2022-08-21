@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "hi this script was created for test"
+echo "if you have file which its format like this => ip port username:password <= >
+echo ""
+
+#read file--------------------
+read -p "enter your file path : " filename
+
+if [ -a $filename ]
+then
+        echo "great we get this"
+else
+        echo "something went wrong"
+fi
+  
