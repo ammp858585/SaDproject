@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "hi this script was created for test"
-echo "if you have file which its format like this => ip port username:password <= >
+echo "if you have file which its format like this => ip port username:password <=  insert it for input "
 echo ""
 
 #read file--------------------
@@ -29,32 +29,29 @@ do
                                         echo "the space of port is ok"
 					if  [[ $line =~ (?:*) ]]
                                                 then
-                                                        echo "the colon of usernam is ok">
+                                                        echo "the colon of usernam is ok"
                                                 else
                                                         echo "--"
 
-						 fi
+					 fi
                                 else
                                         echo "--"
                         fi
                 else
                         echo "--"
-  fi
+ 	 fi
 
 
 done < $filename
 
 #validation the ip and port and password character
 
-#validation the ip and port and password character
-
-#validation the ip and port and password character
 
 while read  line
 do 
         echo $line
 
-        if [[ $line =~ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\ [0-9]{1,5}\>
+        if [[ $line =~ [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\ [0-9]{1,5}\ [a-z]{1,50}\:[a-z]{1,50} ]]
 
                 then
                          echo "this is valid ip"
